@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react'
+import $ from 'jquery';
+import Navbar from './components/Navbar';
+import Newsletter from './components/Newsletter';
+import Preloader from './components/Preloader';
+import Footer from './components/Footer';
+import Main from './components/Main';
 
-function App() {
+
+
+
+function App()
+{
+  const showLoader = async () => {
+    $('#preloader').delay(500).fadeOut(500);
+  }
+
+  useEffect(() => {
+     showLoader();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Preloader />
+      <Newsletter />
+      <Navbar />
+      <Main />
+      <Footer />
+    </>
   );
 }
+
+
 
 export default App;

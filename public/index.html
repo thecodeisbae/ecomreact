@@ -6,7 +6,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <title>React App</title>
+    <title>Ecom | React App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link type="image/x-icon" href="images/fav-icon.png" rel="icon">
     <!-- CSS -->
@@ -17,6 +17,29 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/shoes.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <style>
+        @font-face {
+            font-family: Bozart;
+            src: url('{{ asset("fonts/BOZART.ttf") }}') format('truetype');
+        }
+        
+        @font-face {
+            font-family: Dosis;
+            src: url('{{ asset("fonts/Dosis-VariableFont_wght.ttf") }}') format('truetype');
+        }
+        
+        .text-dosis {
+            font-family: 'Dosis' !important;
+        }
+        
+        .text-bozart {
+            font-family: 'Bozart' !important;
+        }
+        
+        body {
+            font-family: 'Dosis' !important;
+        }
+    </style>
 </head>
 
 <body>
