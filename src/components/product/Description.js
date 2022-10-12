@@ -29,7 +29,7 @@ const Description = () => {
                             <ul>
                                 <li>
                                     <div className="comment-user">
-                                        <img src="images/comment-img1.jpg" alt="comment-img" />
+                                        <img src="/images/comment-img1.jpg" alt="comment-img" />
                                     </div>
                                     <div className="comment-detail">
                                         <span className="commenter">
@@ -44,7 +44,7 @@ const Description = () => {
                                     <ul>
                                         <li>
                                             <div className="comment-user">
-                                                <img src="images/comment-img2.jpg" alt="comment-img" />
+                                                <img src="/images/comment-img2.jpg" alt="comment-img" />
                                             </div>
                                             <div className="comment-detail">
                                                 <span className="commenter">
@@ -57,7 +57,7 @@ const Description = () => {
                                         </li>
                                         <li>
                                             <div className="comment-user">
-                                                <img src="images/comment-img3.jpg" alt="comment-img" />
+                                                <img src="/images/comment-img3.jpg" alt="comment-img" />
                                             </div>
                                             <div className="comment-detail">
                                                 <span className="commenter">

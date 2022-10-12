@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react'
 import { useParams } from 'react-router';
 import Banner from './product/Banner';
 import Description from './product/Description';
+import Related from './product/Related';
 
 const ProductDetails = (props) => {
     
@@ -90,6 +91,7 @@ const ProductDetails = (props) => {
                 </div>
             </section>
             <Description />
+            <Related />
         </>
    
   )
