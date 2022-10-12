@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const FeaturedProducts = (props) => {
   return (
@@ -15,7 +16,7 @@ const FeaturedProducts = (props) => {
                                     <span className="text-uppercase">New</span>
                                 </div>
                                 <div className="product-details-btn text-uppercase text-center transition">
-                                    <a href="javascript:void(0)" onClick={()=> props.onPreview(item)} className="quick-popup mfp-iframe">Quick View</a>
+                                    <Link to="/product" onClick={()=> props.onPreview(item)} className="quick-popup mfp-iframe">Quick View</Link>
                                 </div>
                             </div>
                             <div className="product-desc">
