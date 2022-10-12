@@ -5,10 +5,22 @@
         "price": "500",
         "details": "Men's Air Max",
         "category": 1
+    }, {
+        "id": 2,
+        "title": "Air Max Barbie",
+        "price": "750",
+        "details": "Women's Air Max",
+        "category": 2
     }],
     "categories": [{
-        "id": 1,
-        "name": "Men",
-        "details": "Men's clothes"
-    }]
+            "id": 1,
+            "name": "Men",
+            "details": "Men's clothes"
+        },
+        {
+            "id": 2,
+            "name": "Women",
+            "details": "Women's clothes"
+        }
+    ]
 }

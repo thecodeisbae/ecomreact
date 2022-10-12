@@ -2,7 +2,7 @@ import React from 'react'
 import FeaturedCategories from './FeaturedCategories'
 import FeaturedProducts from './FeaturedProducts'
 
-const FeaturedSection = () => {
+const FeaturedSection = (props) => {
    return (
     <section className="featured pt-100">
         <div className="container">
@@ -12,9 +12,9 @@ const FeaturedSection = () => {
                         <h2 className="hading-title">FEATURED <span>PRODUCTS</span></h2>
                     </div>
                 </div>
-                <FeaturedCategories />
+                <FeaturedCategories categories={props.categories}/>
             </div>
-            <FeaturedProducts />
+            <FeaturedProducts products={props.products} categories={props.categories}/>
         </div>
     </section>
   )
