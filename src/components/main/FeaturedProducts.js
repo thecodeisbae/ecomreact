@@ -42,8 +42,8 @@ const FeaturedProducts = (props) => {
                                                 <a href="product-detail.html">
                                                     <img src={prod.image ? `images/${prod.image}`: 'images/default_product.jpg'} alt="product" className="transition" />
                                                 </a>
-                                                <div className="product-details-btn text-uppercase text-center transition">
-                                                    <a href="product-quick-view.html" className="quick-popup">Quick View</a>
+                                                <div className="product-details-btn text-uppercase text-center transition">                                    
+                                                    <Link to={`/product/${prod.id}`} className="quick-popup">Quick View</Link>
                                                 </div>
                                             </div>
                                             <div className="product-desc" data-category="accessories">
