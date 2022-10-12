@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react'
+import { useState,useEffect } from 'react'
 import $ from 'jquery';
 import Navbar from './components/Navbar';
 import Newsletter from './components/Newsletter';
@@ -16,8 +16,30 @@ function App()
     $('#preloader').delay(500).fadeOut(500);
   }
 
+  const getProducts = async () => {
+    const data = await fetch('http://localhost:5000/products');
+    return data.json()
+  }
+
+  const getCategories = async () => {
+    const data = await fetch('http://localhost:5000/categories');
+    return data.json()
+  }
+
+  const [products,setProducts] = useState([]); 
+  const [categories,setCategories] = useState([]); 
+
   useEffect(() => {
-     showLoader();
+    
+    showLoader();
+    
+    const init = async () =>{
+      setProducts(await getProducts());
+      setCategories(await getCategories());
+    }
+
+    init();
+
   }, []);
 
   return (
@@ -25,7 +47,7 @@ function App()
       <Preloader />
       <Newsletter />
       <Navbar />
-      <Main />
+      <Main products={products} categories={categories}/>
       <Footer />
     </>
   );

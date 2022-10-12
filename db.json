@@ -1,0 +1,14 @@
+{
+    "products": [{
+        "id": 1,
+        "title": "Air Max Jordan",
+        "price": "500",
+        "details": "Men's Air Max",
+        "category": 1
+    }],
+    "categories": [{
+        "id": 1,
+        "name": "Men",
+        "details": "Men's clothes"
+    }]
+}
