@@ -5,7 +5,7 @@ const FeaturedCategories = (props) => {
     <div className="col-xl-6 col-lg-6 col-md-6">
         <ul id="tabs" className="product-isotop filters-product text-right text-uppercase nav nav-tabs" role="tablist">
             <li role="presentation" className="transition" data-filter="*">
-                <a href="#all" className="active" role="tab" data-toggle="tab">all</a>
+                <a href="#all" className="active" role="tab" data-toggle="tab">Tous</a>
             </li>
             {
                 props.categories.map(

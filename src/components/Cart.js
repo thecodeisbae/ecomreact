@@ -5,7 +5,7 @@ const Cart = () => {
     <div className="cart-dropdown header-link-dropdown">
         <ul className="cart-list link-dropdown-list">
             <li> 
-                <a href="javascript:void(0)" className="close-cart"><i className="fa fa-times-circle"></i></a>
+                <a href="#" className="close-cart"><i className="fa fa-times-circle"></i></a>
                 <figure> 
                     <a href="product-detail.html" className="pull-left"> 
                         <img alt="product" src="images/product-1.jpg" />

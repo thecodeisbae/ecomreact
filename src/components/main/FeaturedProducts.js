@@ -33,24 +33,29 @@ const FeaturedProducts = (props) => {
                 (
                     <div key={category.id} role="tabpanel" className="row tab-pane fade" id={category.name.toLowerCase()}>
                         {
-                            props.products.filter((product) => product.category === category.id).map(
-                                (prod)=>(
-                                    <div key={prod.id} className="featured-product mb-25">
-                                        <div className="product-img transition mb-15">
-                                            <a href="product-detail.html">
-                                                <img src="images/product-4.jpg" alt="product" className="transition" />
-                                            </a>
-                                            <div className="product-details-btn text-uppercase text-center transition">
-                                                <a href="product-quick-view.html" className="quick-popup">Quick View</a>
+                            (props.products.filter((product) => product.category === category.id).length > 0) ? 
+                                props.products.filter((product) => product.category === category.id).map(
+                                    (prod)=>(
+                                        <div key={prod.id} className="featured-product mb-25">
+                                            <div className="product-img transition mb-15">
+                                                <a href="product-detail.html">
+                                                    <img src="images/product-4.jpg" alt="product" className="transition" />
+                                                </a>
+                                                <div className="product-details-btn text-uppercase text-center transition">
+                                                    <a href="product-quick-view.html" className="quick-popup">Quick View</a>
+                                                </div>
+                                            </div>
+                                            <div className="product-desc" data-category="accessories">
+                                                <a href="product-detail.html" className="product-name text-uppercase">{prod.title}</a>
+                                                <span className="product-pricce">{prod.price} XOF</span>
                                             </div>
                                         </div>
-                                        <div className="product-desc" data-category="accessories">
-                                            <a href="product-detail.html" className="product-name text-uppercase">{prod.title}</a>
-                                            <span className="product-pricce">{prod.price} XOF</span>
-                                        </div>
-                                    </div>
-                                )
-                            )
+                                    )
+                                ) 
+                                :
+                                <div align="center" className="container-fluid">
+                                    <h1 align="center" className="text-dosis">AUCUN PRODUIT</h1>
+                                </div>
                         }
                     </div>
                 )

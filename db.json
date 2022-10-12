@@ -21,6 +21,11 @@
             "id": 2,
             "name": "Women",
             "details": "Women's clothes"
+        },
+        {
+            "id": 3,
+            "name": "Shoes",
+            "details": "Shoes for all people"
         }
     ]
 }
