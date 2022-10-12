@@ -18,6 +18,13 @@ function App()
     $('#preloader').delay(500).fadeOut(500);
   }
 
+  const imageSlider = async () => {
+    const script = document.createElement('script');
+    script.text = "$('#glasscase').glassCase({'thumbsPosition': 'bottom','widthDisplayPerc': 100,isDownloadEnabled: false,});";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+
   const getProducts = async () => {
     const data = await fetch('http://localhost:5000/products');
     return data.json()
@@ -63,7 +70,7 @@ function App()
             </>
           } 
         />
-        <Route path='/product' element={<ProductDetails />} />
+        <Route path='/product/:id' element={<ProductDetails imageSlider={imageSlider} />} />
       </Routes>
       <Footer />
     </Router>

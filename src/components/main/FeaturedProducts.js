@@ -16,7 +16,7 @@ const FeaturedProducts = (props) => {
                                     <span className="text-uppercase">New</span>
                                 </div>
                                 <div className="product-details-btn text-uppercase text-center transition">
-                                    <Link to="/product" onClick={()=> props.onPreview(item)} className="quick-popup mfp-iframe">Quick View</Link>
+                                    <Link to={`/product/${item.id}`} className="quick-popup mfp-iframe">Quick View</Link>
                                 </div>
                             </div>
                             <div className="product-desc">

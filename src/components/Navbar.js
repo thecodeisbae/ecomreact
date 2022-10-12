@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Cart from './Cart'
 import ShopFragment from './ShopFragment'
 
@@ -10,7 +11,7 @@ const Navbar = () => {
                     <div className="col-lg-2 col-md-4 col-6 align-flax">
                         <div className="navbar-header">
                             <a className="navbar-brand" href="index.html">
-                                <img alt="log" src="images/logo.png" className="transition" />
+                                <img alt="log" src="/images/logo.png" className="transition" />
                             </a> 
                         </div>
                     </div>
@@ -19,7 +20,7 @@ const Navbar = () => {
                             <div className="menu" >
                                 <ul>
                                     <li>
-                                        <a href="index.html">Home</a>
+                                        <Link to="/">Home</Link>
                                     </li>
                                     <li className="dropdown">
                                         <span className="opener plus"></span>
@@ -66,7 +67,7 @@ const Navbar = () => {
                                 <input type="text" name="search" className="search-input" placeholder="Search text" />
                                 <input type="submit" name="submit" className="search-btn" />
                                 <div className="search-button-i transition">
-                                    <img src="images/search.png" className="position-r transition" alt="search" />
+                                    <img src="/images/search.png" className="position-r transition" alt="search" />
                                 </div>
                             </div>
                             <ul className="login-cart">
@@ -78,7 +79,7 @@ const Navbar = () => {
                                 <li>
                                     <div className="cart-menu">
                                         <div className="cart-icon position-r">
-                                            <img src="images/car-icon-w.png" className="position-r transition" alt="cart" />
+                                            <img src="/images/car-icon-w.png" className="position-r transition" alt="cart" />
                                         </div>
                                        <Cart />
                                     </div>

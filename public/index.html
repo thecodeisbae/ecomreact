@@ -10,14 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link type="image/x-icon" href="images/fav-icon.png" rel="icon">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/glass-case.css">
-    <link rel="stylesheet" type="text/css" href="css/shoes.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/css/glass-case.css">
+    <link rel="stylesheet" type="text/css" href="/css/shoes.css">
+    <link rel="stylesheet" type="text/css" href="/css/responsive.css">
     <style>
         @font-face {
             font-family: Bozart;
@@ -44,16 +44,15 @@
 </head>
 
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/custom.js"></script>
     <script>
         $(window).on('load', function() {
+
             setTimeout(function() {
                 mfp = $.magnificPopup.instance;
                 if (!mfp.isOpen) {
@@ -66,15 +65,9 @@
                 }
             }, 10000)
         });
-
-        $(document).ready(function() {
-            $('#glasscase').glassCase({
-                'thumbsPosition': 'bottom',
-                'widthDisplayPerc': 100,
-                isDownloadEnabled: false,
-            });
-        });
     </script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
 </body>
 
 </html>

@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="footer-inner">
                     <div className="footer-box">
                         <div className="footer-logo">
-                            <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+                            <a href="index.html"><img src="/images/logo.png" alt="logo" /></a>
                         </div>
                         <p className="footer-desc">Lorem ipsum dolor sit amet, consectetur adipi-scing elit. In purus sem, consectetur sed aliquam vel, hendrerit in elit. Nunc interdum dolor at quam pulvinar sodales. Nunc venenatis egestas mi ac fermentum.</p>
                     </div>
@@ -55,9 +55,9 @@ const Footer = () => {
                         <span className="opener plus"></span>
                         <h2 className="footer-title text-uppercase">Contact us</h2>
                         <ul className="footer-block-contant">
-                            <li><img src="images/cont-1.png" alt="img" /><span>28 Green Tower, Street Name <br />New York City, USA</span></li>
-                            <li><img src="images/cont-2.png" alt="img" /><a href="tel:+911234567890">+ 91 123 456 789 0</a></li>
-                            <li><img src="images/cont-3.png" alt="img" /><a href="mailto:xpoge@example.com">xpoge@example.com</a></li>
+                            <li><img src="/images/cont-1.png" alt="img" /><span>28 Green Tower, Street Name <br />New York City, USA</span></li>
+                            <li><img src="/images/cont-2.png" alt="img" /><a href="tel:+911234567890">+ 91 123 456 789 0</a></li>
+                            <li><img src="/images/cont-3.png" alt="img" /><a href="mailto:xpoge@example.com">xpoge@example.com</a></li>
                         </ul>
                     </div>
                 </div>
