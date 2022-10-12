@@ -1,11 +1,13 @@
 import './App.css';
 import { useState,useEffect } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import $ from 'jquery';
 import Navbar from './components/Navbar';
 import Newsletter from './components/Newsletter';
 import Preloader from './components/Preloader';
 import Footer from './components/Footer';
 import Main from './components/Main';
+import ProductDetails from './components/ProductDetails';
 
 
 
@@ -21,6 +23,10 @@ function App()
     return data.json()
   }
 
+  const previewProduct = (product) => {
+    console.log(product);
+  }
+
   const getCategories = async () => {
     const data = await fetch('http://localhost:5000/categories');
     return data.json()
@@ -32,7 +38,7 @@ function App()
   useEffect(() => {
     
     showLoader();
-    
+
     const init = async () =>{
       setProducts(await getProducts());
       setCategories(await getCategories());
@@ -43,13 +49,24 @@ function App()
   }, []);
 
   return (
-    <>
+    <Router>
       <Preloader />
-      <Newsletter />
       <Navbar />
-      <Main products={products} categories={categories}/>
+      <Newsletter />
+      <Routes>
+        <Route 
+          path='/'
+          exact
+          element={
+            <>
+              <Main products={products} categories={categories} onPreview={previewProduct}/>
+            </>
+          } 
+        />
+        <Route path='/product' element={<ProductDetails />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

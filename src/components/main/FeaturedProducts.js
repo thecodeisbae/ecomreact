@@ -9,13 +9,13 @@ const FeaturedProducts = (props) => {
                         <div key={item.id} className="featured-product mb-25">
                             <div className="product-img transition mb-15">
                                 <a href="product-detail.html">
-                                    <img src="images/product-1.jpg" alt="product" className="transition" />
+                                    <img src={item.image ? `images/${item.image}`: 'images/default_product.jpg'} alt="product" className="transition" />
                                 </a>
                                 <div className="new-label">
                                     <span className="text-uppercase">New</span>
                                 </div>
                                 <div className="product-details-btn text-uppercase text-center transition">
-                                    <a href="product-quick-view.html" className="quick-popup mfp-iframe">Quick View</a>
+                                    <a href="javascript:void(0)" onClick={()=> props.onPreview(item)} className="quick-popup mfp-iframe">Quick View</a>
                                 </div>
                             </div>
                             <div className="product-desc">
@@ -39,7 +39,7 @@ const FeaturedProducts = (props) => {
                                         <div key={prod.id} className="featured-product mb-25">
                                             <div className="product-img transition mb-15">
                                                 <a href="product-detail.html">
-                                                    <img src="images/product-4.jpg" alt="product" className="transition" />
+                                                    <img src={prod.image ? `images/${prod.image}`: 'images/default_product.jpg'} alt="product" className="transition" />
                                                 </a>
                                                 <div className="product-details-btn text-uppercase text-center transition">
                                                     <a href="product-quick-view.html" className="quick-popup">Quick View</a>

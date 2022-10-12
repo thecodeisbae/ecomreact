@@ -8,7 +8,7 @@ const Main = (props) => {
   return (
     <>
       <Slider />
-      <FeaturedSection products={props.products} categories={props.categories} />
+      <FeaturedSection products={props.products} categories={props.categories} onPreview={props.onPreview}/>
       <BlogSection />
       <Partners />
     </>

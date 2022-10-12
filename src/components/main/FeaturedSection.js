@@ -14,7 +14,7 @@ const FeaturedSection = (props) => {
                 </div>
                 <FeaturedCategories categories={props.categories}/>
             </div>
-            <FeaturedProducts products={props.products} categories={props.categories}/>
+            <FeaturedProducts onPreview={props.onPreview} products={props.products} categories={props.categories}/>
         </div>
     </section>
   )
