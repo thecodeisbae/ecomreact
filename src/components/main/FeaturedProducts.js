@@ -9,9 +9,9 @@ const FeaturedProducts = (props) => {
                 props.products.map((item)=>(
                         <div key={item.id} className="featured-product mb-25">
                             <div className="product-img transition mb-15">
-                                <a href="product-detail.html">
+                                <Link to={`/product/${item.id}`}>
                                     <img src={item.image ? `images/${item.image}`: 'images/default_product.jpg'} alt="product" className="transition" />
-                                </a>
+                                </Link>
                                 <div className="new-label">
                                     <span className="text-uppercase">New</span>
                                 </div>
@@ -20,7 +20,7 @@ const FeaturedProducts = (props) => {
                                 </div>
                             </div>
                             <div className="product-desc">
-                                <a href="product-detail.html" className="product-name text-uppercase">{item.title}</a>
+                                <Link to={`/product/${item.id}`} className="product-name text-uppercase">{item.title}</Link>
                                 <span className="product-pricce">{item.price} XOF</span>
                             </div>
                         </div>
@@ -39,15 +39,15 @@ const FeaturedProducts = (props) => {
                                     (prod)=>(
                                         <div key={prod.id} className="featured-product mb-25">
                                             <div className="product-img transition mb-15">
-                                                <a href="product-detail.html">
+                                                <Link to={`/product/${prod.id}`}>
                                                     <img src={prod.image ? `images/${prod.image}`: 'images/default_product.jpg'} alt="product" className="transition" />
-                                                </a>
+                                                </Link>
                                                 <div className="product-details-btn text-uppercase text-center transition">                                    
                                                     <Link to={`/product/${prod.id}`} className="quick-popup">Quick View</Link>
                                                 </div>
                                             </div>
                                             <div className="product-desc" data-category="accessories">
-                                                <a href="product-detail.html" className="product-name text-uppercase">{prod.title}</a>
+                                                <Link to={`/product/${prod.id}`} className="product-name text-uppercase">{prod.title}</Link>
                                                 <span className="product-pricce">{prod.price} XOF</span>
                                             </div>
                                         </div>
