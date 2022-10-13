@@ -41,6 +41,7 @@ function App()
 
   const [products,setProducts] = useState([]); 
   const [categories,setCategories] = useState([]); 
+  const [cart,setCart] = useState([{title:'Men basket',price:500,qty:5}]);
 
   useEffect(() => {
     
@@ -58,7 +59,7 @@ function App()
   return (
     <Router>
       <Preloader />
-      <Navbar />
+      <Navbar cart={cart} setCart={setCart} />
       <Newsletter />
       <Routes>
         <Route 

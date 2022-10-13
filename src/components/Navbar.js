@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Cart from './Cart'
 import ShopFragment from './ShopFragment'
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
         <header className="header transition">
             <div className="container position-r">
@@ -81,7 +81,7 @@ const Navbar = () => {
                                         <div className="cart-icon position-r">
                                             <img src="/images/car-icon-w.png" className="position-r transition" alt="cart" />
                                         </div>
-                                       <Cart />
+                                       <Cart cart={props.cart} setCart={props.setCart}/>
                                     </div>
                                 </li>
                             </ul>
