@@ -9,7 +9,7 @@ const Slider = () => {
                         <div className="w-100">
                             <div className="row">
                                 <div className="col-xl-6 col-lg-6 col-md-6 align-flax">
-                                    <div className="banner-img"><img src="images/banner.jpg" alt="banner" /></div>
+                                    <div className="banner-img"><img src="/images/banner.jpg" alt="banner" /></div>
                                 </div>
                                 <div className="col-xl-6 col-lg-6 col-md-6 align-flax">
                                     <div className="banner-heading w-100">
@@ -26,7 +26,7 @@ const Slider = () => {
                         <div className="w-100">
                             <div className="row">
                                 <div className="col-xl-6 col-lg-6 col-md-6 align-flax">
-                                    <div className="banner-img"><img src="images/banner-2.png" alt="banner" /></div>
+                                    <div className="banner-img"><img src="/images/banner-2.png" alt="banner" /></div>
                                 </div>
                                 <div className="col-xl-6 col-lg-6 col-md-6 align-flax">
                                     <div className="banner-heading w-100">

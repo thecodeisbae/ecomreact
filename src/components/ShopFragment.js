@@ -10,7 +10,7 @@ const ShopFragment = () => {
                         <div className="row">
                             <div className="col-xl-12 col-lg-12 col-md-12 pb-10">
                                 <a href="product-detail.html" className="img-drop-bottom">
-                                    <img src="images/menu.jpg" className="transition" alt="img" />
+                                    <img src="/images/menu.jpg" className="transition" alt="img" />
                                 </a>
                             </div>
                         </div>
