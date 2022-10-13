@@ -29,9 +29,9 @@ const ProductDetails = (props) => {
     return (
         <>
             <Banner product={product}/>
-			<section class="product-detail-main pt-100">
-				<div class="container">
-					<div class="row">
+			<section className="product-detail-main pt-100">
+				<div className="container">
+					<div className="row">
                         <div className="col-lg-5 col-md-6 col-12">
                             <div className="align-center mb-md-30">
                                 <ul id="glasscase" className="gc-start">

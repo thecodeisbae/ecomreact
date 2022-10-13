@@ -31,8 +31,8 @@ function App()
   }
 
   const addToCart = (product) =>{
-    console.log('Product'+product)
-    setCart([...cart,[...product,{qte:1}]]);
+    console.log(product)
+    setCart([...cart,{...product,qte:1}]);
   };
 
   const previewProduct = (product) => {
@@ -46,7 +46,7 @@ function App()
 
   const [products,setProducts] = useState([]); 
   const [categories,setCategories] = useState([]); 
-  const [cart,setCart] = useState([{title:'Men basket',price:500,qty:5}]);
+  const [cart,setCart] = useState([]);
 
   useEffect(() => {
     

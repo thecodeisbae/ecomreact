@@ -10,7 +10,7 @@ const Cart = ({cart,setCart}) => {
                         <a href="#" className="close-cart"><i className="fa fa-times-circle"></i></a>
                         <figure> 
                             <a href="product-detail.html" className="pull-left"> 
-                                <img alt="product" src="images/product-1.jpg" />
+                                <img alt="product" src="/images/product-1.jpg" />
                             </a>
                             <figcaption> 
                                 <span>
