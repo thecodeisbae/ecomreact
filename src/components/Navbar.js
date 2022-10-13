@@ -81,7 +81,7 @@ const Navbar = (props) => {
                                         <div className="cart-icon position-r">
                                             <img src="/images/car-icon-w.png" className="position-r transition" alt="cart" />
                                         </div>
-                                       <Cart cart={props.cart} setCart={props.setCart}/>
+                                       <Cart cart={props.cart} removeFromCart={props.removeFromCart} setCart={props.setCart}/>
                                     </div>
                                 </li>
                             </ul>

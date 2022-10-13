@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Cart = ({cart,setCart}) => {
+const Cart = ({cart,setCart,removeFromCart}) => {
   return (
     <div className="cart-dropdown header-link-dropdown">
         <ul className="cart-list link-dropdown-list">
             {
                 cart.map((item)=>(    
                     <li key={item.id}> 
-                        <a href="#" className="close-cart"><i className="fa fa-times-circle"></i></a>
+                        <a href="#" onClick={()=>removeFromCart(item)} className="close-cart"><i className="fa fa-times-circle"></i></a>
                         <figure> 
                             <a href="product-detail.html" className="pull-left"> 
                                 <img alt="product" src="/images/product-1.jpg" />

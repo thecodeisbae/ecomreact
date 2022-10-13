@@ -60,12 +60,12 @@ const ProductDetails = (props) => {
                                     <div className="row mt-20">
                                         <div className="col-12">
                                             <div className="table-listing qty">
-                                                <label>Qut:</label>
+                                                <label>Qte:</label>
                                                 <div className="fill-input">
                                                     <button type="button" id="sub" className="sub cou-sub">
                                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                                     </button>
-                                                    <input type="number" id="1" className="input-text qty" value="1" min="1" max="3" />
+                                                    <input type="number" id="1" onChange={(e)=>props.updateCart(product,e.target.value)} className="input-text qty" value='' min="1" max="3" />
                                                     <button type="button" id="add" className="add cou-sub">
                                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                                     </button>

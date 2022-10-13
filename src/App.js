@@ -35,19 +35,33 @@ function App()
     console.log(objIndex)
     if(objIndex != -1)
     {
-      setCart(
-        cart =>
-          cart.map(obj => {
-            if (obj.id === product.id) {
-              return {...obj, qty:obj.qty+1};
-            }
-            return obj;
-          })
-      )
+      updateCart(product,1)
     }else{
       setCart([...cart,{...product,qty:1}]);
     }
   };
+
+  const updateCart = (product,qte) =>{
+    console.log(qte)
+    setCart(
+        cart =>
+          cart.map(obj => {
+            if (obj.id === product.id) {
+              return {...obj, qty: (obj.qty+qte)};
+            }
+            return obj;
+          })
+      )
+  }
+
+  const removeFromCart = (product) => {
+    setCart(
+        cart =>
+          cart.filter(obj => {
+            return obj.id !== product.id;
+          }),
+    )
+  }
 
   const previewProduct = (product) => {
     console.log(product);
@@ -78,7 +92,7 @@ function App()
   return (
     <Router>
       <Preloader />
-      <Navbar cart={cart} setCart={setCart} />
+      <Navbar cart={cart} setCart={setCart} removeFromCart={removeFromCart} />
       <Newsletter />
       <Routes>
         <Route 
@@ -90,7 +104,7 @@ function App()
             </>
           } 
         />
-        <Route path='/product/:id' element={<ProductDetails addToCart={addToCart} imageSlider={imageSlider} />} />
+        <Route path='/product/:id' element={<ProductDetails updateCart={updateCart}  addToCart={addToCart} imageSlider={imageSlider} />} />
       </Routes>
       <Footer />
     </Router>
