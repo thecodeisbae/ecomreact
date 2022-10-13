@@ -74,7 +74,7 @@ const ProductDetails = (props) => {
                                             <div className="product-action">
                                                 <ul>
                                                     <li>
-                                                        <a href="cart.html" className="btn btn-color">
+                                                        <a href="#" onClick={()=> props.addToCart(product)} className="btn btn-color">
                                                             <img src="/images/shop-bag.png" alt="bag" />
                                                             <span>add to cart</span>
                                                         </a>

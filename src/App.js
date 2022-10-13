@@ -30,6 +30,11 @@ function App()
     return data.json()
   }
 
+  const addToCart = (product) =>{
+    console.log('Product'+product)
+    setCart([...cart,[...product,{qte:1}]]);
+  };
+
   const previewProduct = (product) => {
     console.log(product);
   }
@@ -71,7 +76,7 @@ function App()
             </>
           } 
         />
-        <Route path='/product/:id' element={<ProductDetails imageSlider={imageSlider} />} />
+        <Route path='/product/:id' element={<ProductDetails addToCart={addToCart} imageSlider={imageSlider} />} />
       </Routes>
       <Footer />
     </Router>
