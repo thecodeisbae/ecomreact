@@ -6,7 +6,7 @@ const Cart = ({cart,setCart}) => {
         <ul className="cart-list link-dropdown-list">
             {
                 cart.map((item)=>(    
-                    <li> 
+                    <li key={item.id}> 
                         <a href="#" className="close-cart"><i className="fa fa-times-circle"></i></a>
                         <figure> 
                             <a href="product-detail.html" className="pull-left"> 

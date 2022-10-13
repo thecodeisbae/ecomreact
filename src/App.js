@@ -31,8 +31,22 @@ function App()
   }
 
   const addToCart = (product) =>{
-    console.log(product)
-    setCart([...cart,{...product,qte:1}]);
+    let objIndex = cart.findIndex((obj => obj.id === product.id));
+    console.log(objIndex)
+    if(objIndex != -1)
+    {
+      setCart(
+        cart =>
+          cart.map(obj => {
+            if (obj.id === product.id) {
+              return {...obj, qty:obj.qty+1};
+            }
+            return obj;
+          })
+      )
+    }else{
+      setCart([...cart,{...product,qty:1}]);
+    }
   };
 
   const previewProduct = (product) => {
