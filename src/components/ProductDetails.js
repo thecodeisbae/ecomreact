@@ -9,6 +9,8 @@ const ProductDetails = (props) => {
     
     let { id } = useParams();
 
+    const [qte,setQte] = useState(1);
+
     const [product,setProduct] = useState([]);
     
     const getProduct = async (id) => {
@@ -19,9 +21,9 @@ const ProductDetails = (props) => {
     useEffect(() => {
         const init = async () => {
             setProduct(await getProduct(id));
+            await props.imageSlider()
         }
 
-        props.imageSlider()
 
         init();
     });
@@ -65,7 +67,7 @@ const ProductDetails = (props) => {
                                                     <button type="button" id="sub" className="sub cou-sub">
                                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                                     </button>
-                                                    <input type="number" id="1" onChange={(e)=>props.updateCart(product,e.target.value)} className="input-text qty" value='' min="1" max="3" />
+                                                    <input type="number" onChange={(e)=> { setQte(e.target.value);props.addToCart(product,e.target.value);}} className="input-text qty" value={qte} />
                                                     <button type="button" id="add" className="add cou-sub">
                                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                                     </button>

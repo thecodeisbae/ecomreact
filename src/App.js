@@ -21,8 +21,9 @@ function App()
   const imageSlider = async () => {
     const script = document.createElement('script');
     script.text = "$('#glasscase').glassCase({'thumbsPosition': 'bottom','widthDisplayPerc': 100,isDownloadEnabled: false,});";
-    script.async = true;
-    document.body.appendChild(script);
+    script.id = "glass";
+    if($('#glass').length === 0)
+      document.body.appendChild(script);
   }
 
   const getProducts = async () => {
@@ -30,14 +31,14 @@ function App()
     return data.json()
   }
 
-  const addToCart = (product) =>{
+  const addToCart = (product,qte = 1) =>{
     let objIndex = cart.findIndex((obj => obj.id === product.id));
     console.log(objIndex)
     if(objIndex != -1)
     {
-      updateCart(product,1)
+      updateCart(product,qte)
     }else{
-      setCart([...cart,{...product,qty:1}]);
+      setCart([...cart,{...product,qty:qte}]);
     }
   };
 
@@ -47,7 +48,7 @@ function App()
         cart =>
           cart.map(obj => {
             if (obj.id === product.id) {
-              return {...obj, qty: (obj.qty+qte)};
+              return {...obj, qty: (parseInt(obj.qty)+parseInt(qte))};
             }
             return obj;
           })
