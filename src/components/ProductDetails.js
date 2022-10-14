@@ -9,8 +9,6 @@ const ProductDetails = (props) => {
     
     let { id } = useParams();
 
-    const [qte,setQte] = useState(1);
-
     const [product,setProduct] = useState([]);
     
     const getProduct = async (id) => {
@@ -18,12 +16,12 @@ const ProductDetails = (props) => {
         return data.json()
     }
 
+
     useEffect(() => {
         const init = async () => {
             setProduct(await getProduct(id));
             await props.imageSlider()
         }
-
 
         init();
     });
@@ -61,22 +59,22 @@ const ProductDetails = (props) => {
                                     </ul>
                                     <div className="row mt-20">
                                         <div className="col-12">
-                                            <div className="table-listing qty">
+                                            {/* <div className="table-listing qty">
                                                 <label>Qte:</label>
                                                 <div className="fill-input">
                                                     <button type="button" id="sub" className="sub cou-sub">
                                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                                     </button>
-                                                    <input type="number" onChange={(e)=> { setQte(e.target.value);props.addToCart(product,e.target.value);}} className="input-text qty" value={qte} />
+                                                    <input type="number" onChange={(e)=> props.addToCart(product,e.target.value)} className="input-text qty" value="1" />
                                                     <button type="button" id="add" className="add cou-sub">
                                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                                     </button>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                             <div className="product-action">
                                                 <ul>
                                                     <li>
-                                                        <a href="#" onClick={()=> props.addToCart(product)} className="btn btn-color">
+                                                        <a href="javascript:void(0)" onClick={()=> {props.addToCart(product)}} className="btn btn-color">
                                                             <img src="/images/shop-bag.png" alt="bag" />
                                                             <span>add to cart</span>
                                                         </a>

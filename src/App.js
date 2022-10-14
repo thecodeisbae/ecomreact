@@ -8,7 +8,8 @@ import Preloader from './components/Preloader';
 import Footer from './components/Footer';
 import Main from './components/Main';
 import ProductDetails from './components/ProductDetails';
-
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -91,8 +92,10 @@ function App()
     console.log(objIndex)
     if(objIndex != -1)
     {
+      toast.success('Panier mis à jour avec succès');
       updateCart(product,qte)
     }else{
+      toast.success('Produit ajouté au panier avec succès');
       setCart([...cart,{...product,qty:qte}]);
     }
   };
@@ -117,6 +120,7 @@ function App()
             return obj.id !== product.id;
           }),
     )
+    toast.error('Produit supprimé du panier avec succès');
   }
 
   const previewProduct = (product) => {
@@ -147,6 +151,16 @@ function App()
 
   return (
     <Router>
+      <ToastContainer 
+        position="top-right"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover/>
       <Preloader />
       <Navbar cart={cart} setCart={setCart} removeFromCart={removeFromCart} />
       <Newsletter />
