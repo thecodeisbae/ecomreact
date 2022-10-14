@@ -24,6 +24,61 @@ function App()
     script.id = "glass";
     if($('#glass').length === 0)
       document.body.appendChild(script);
+    else{
+      $('#glass').remove();
+      document.body.appendChild(script);
+    }
+  }
+
+  const homeSlider = async () => {
+    const script = document.createElement('script');
+    script.text = 'if ($(".home-slider").length > 0) {'+
+        '$(".home-slider").owlCarousel({'+
+        '    items: 1,'+
+        '    loop:true,'+
+        '    margin:0,'+
+        '    nav:true,'+
+        '    responsive: {'+
+        '        0: {'+
+        '            dots: true,'+
+        '            nav:false,'+
+        '        },'+
+        '        768: {'+
+        '            nav:true,'+
+        '        },'+
+        '    }'+
+        '});'+
+        '}'+
+        'if ($(".latest-blog-salid").length > 0) {'+
+        '    $(".latest-blog-salid").owlCarousel({'+
+        '        loop: true,'+
+        '        dots: false,'+
+        '        nav: true,'+
+        '        items: 2,'+
+        '        mouseDrag: false,'+
+        '        autoplaySpeed: 1000,'+
+        '        autoplayTimeout:5000,'+
+        '        autoplayHoverPause: true,'+
+        '        responsiveClass: true,'+
+        '        responsive: {'+
+        '            0: {'+
+        '                items: 1,'+
+        '            },'+
+        '            1200: {'+
+        '                items: 2,'+
+        '            },'+
+        '        }'+
+        '    });'+
+        '}'
+        ;
+    
+    script.id = "homeSlider";
+    if($('#homeSlider').length === 0)
+      document.body.appendChild(script);
+    else{
+      $('#homeSlider').remove();
+      document.body.appendChild(script);
+    }
   }
 
   const getProducts = async () => {
@@ -101,7 +156,7 @@ function App()
           exact
           element={
             <>
-              <Main products={products} categories={categories} onPreview={previewProduct}/>
+              <Main homeSlider={homeSlider} products={products} categories={categories} onPreview={previewProduct}/>
             </>
           } 
         />
